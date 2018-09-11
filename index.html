@@ -7,6 +7,25 @@
   <body>
   </body>
   <script type="text/javascript">
-    
+
+    let choseRock = "Rock";
+    let chosePaper = "Paper";
+    let choseScissors = "Scissors";
+
+    function computerPlay(){
+      let randomNum = Math.floor(Math.random() * 3);
+      if(randomNum === 0){
+        return choseRock;
+      } else if (randomNum === 1){
+        return chosePaper;
+      } else {
+        return choseScissors;
+        }
+      }
+
+    // function playRound(playerSelection, computerSelection){
+    //
+    // }
+
   </script>
 </html>
