@@ -22,10 +22,26 @@
         return choseScissors;
         }
       }
-
-    // function playRound(playerSelection, computerSelection){
-    //
-    // }
+//** MUST REFACTOR THIS FUNCTION, USE A SWITCH STATEMENT
+    function playRound(playerSelection, computerSelection){
+      if(playerSelection.toUpperCase() === computerSelection.toUpperCase()){
+        console.log("Tie!");
+      } else if (playerSelection.toUpperCase() === choseRock.toUpperCase() && computerSelection ===  chosePaper){
+        console.log("You lose, " + computerSelection + " beats " + choseRock);
+      } else if (playerSelection.toUpperCase() === chosePaper.toUpperCase() && computerSelection ===  choseScissors){
+        console.log("You lose, " + computerSelection + " beats " + chosePaper);
+      } else if (playerSelection.toUpperCase() === choseScissors.toUpperCase() && computerSelection ===  choseRock){
+        console.log("You lose, " + computerSelection + " beats " + choseScissors);
+      } else if (playerSelection.toUpperCase() === choseRock.toUpperCase() && computerSelection ===  choseScissors){
+        console.log("You win, " + playerSelection + " beats " + choseScissors);
+      } else if (playerSelection.toUpperCase() === chosePaper.toUpperCase() && computerSelection ===  choseRock){
+        console.log("You win, " + playerSelection + " beats " + choseRock);
+      } else if (playerSelection.toUpperCase() === choseScissors.toUpperCase() && computerSelection ===  chosePaper){
+        console.log("You win, " + playerSelection + " beats " + chosePaper);
+      } else  if (playerSelection !== choseRock || playerSelection !== chosePaper || playerSelection !== choseScissors){
+        console.log("Invalid Entry");
+      }
+    }
 
   </script>
 </html>
