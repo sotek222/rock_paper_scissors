@@ -11,6 +11,8 @@
     let choseRock = "rock";
     let chosePaper = "paper";
     let choseScissors = "scissors";
+    let playerScore = 0;
+    let compScore = 0;
 
     function computerPlay(){
       let randomNum = Math.floor(Math.random() * 3);
@@ -23,23 +25,38 @@
         }
       }
 
+      const computerSelection = computerPlay();
+
   function playRound(playerSelection, computerSelection){
     switch (true){
       case (playerSelection.toUpperCase() === choseRock.toUpperCase() &&
       computerSelection === choseScissors || playerSelection.toUpperCase() === chosePaper.toUpperCase() &&
       computerSelection === choseRock || playerSelection.toUpperCase() === choseScissors.toUpperCase() &&
       computerSelection === chosePaper) :
-      return `You win, ${playerSelection.toLowerCase()} beats ${computerSelection}`;
+      playerScore++;
+      return "Won";
       case (playerSelection.toUpperCase() === choseScissors.toUpperCase() &&
       computerSelection === choseRock || playerSelection.toUpperCase() === choseRock.toUpperCase() &&
       computerSelection === chosePaper || playerSelection.toUpperCase() === chosePaper.toUpperCase() &&
       computerSelection === choseScissors) :
-      return `You lose, ${computerSelection} beats ${playerSelection.toLowerCase()}`;
+      compScore++;
+      return "Lost";
       case (playerSelection.toUpperCase() === computerSelection.toUpperCase()) :
-      return `${playerSelection.toLowerCase()} & ${computerSelection} are a tie!`;
+      return "Tie";
       default:
       return "Invalid Selection";
     }
   }
+
+function game(){
+  for(i=0;i<5;i++){
+  let playerSelection = window.prompt("Rock, Paper or Scissors?");
+  playRound(playerSelection, computerSelection);
+  console.log(`Your choice: ${playerSelection}, Your Score: ${playerScore}, Computers choice: ${computerSelection} Computers Score: ${compScore}`);
+  }
+}
+
+game();
+
   </script>
 </html>
