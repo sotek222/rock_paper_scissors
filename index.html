@@ -23,21 +23,22 @@
         }
       }
 
-    function playRound(playerSelection, computerSelection){
-      if(playerSelection.toUpperCase() === computerSelection.toUpperCase()){
-         return "Tie!";
-    } else if (playerSelection.toUpperCase() === choseRock.toUpperCase() &&
-    computerSelection === chosePaper || playerSelection.toUpperCase() === chosePaper.toUpperCase() &&
-    computerSelection === choseScissors || playerSelection.toUpperCase() === choseScissors.toUpperCase() &&
-    computerSelection === choseRock) {
-      return `You lose, ${computerSelection.toLowerCase()} beats ${playerSelection}`;
-    } else if (playerSelection.toUpperCase() === choseRock.toUpperCase() &&
-    computerSelection === choseScissors || playerSelection.toUpperCase() === chosePaper.toUpperCase() &&
-    computerSelection === choseRock || playerSelection.toUpperCase() === choseScissors.toUpperCase() &&
-    computerSelection === chosePaper){
+  function playRound(playerSelection, computerSelection){
+    switch (true){
+      case (playerSelection.toUpperCase() === choseRock.toUpperCase() &&
+      computerSelection === choseScissors || playerSelection.toUpperCase() === chosePaper.toUpperCase() &&
+      computerSelection === choseRock || playerSelection.toUpperCase() === choseScissors.toUpperCase() &&
+      computerSelection === chosePaper) :
       return `You win, ${playerSelection.toLowerCase()} beats ${computerSelection}`;
-    } else {
-      return `${playerSelection} is not a valid input!`;
+      case (playerSelection.toUpperCase() === choseScissors.toUpperCase() &&
+      computerSelection === choseRock || playerSelection.toUpperCase() === choseRock.toUpperCase() &&
+      computerSelection === chosePaper || playerSelection.toUpperCase() === chosePaper.toUpperCase() &&
+      computerSelection === choseScissors) :
+      return `You lose, ${computerSelection} beats ${playerSelection.toLowerCase()}`;
+      case (playerSelection.toUpperCase() === computerSelection.toUpperCase()) :
+      return `${playerSelection.toLowerCase()} & ${computerSelection} are a tie!`;
+      default:
+      return "Invalid Selection";
     }
   }
   </script>
