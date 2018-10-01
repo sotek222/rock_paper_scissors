@@ -2,26 +2,29 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Roshambo!</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="outer_container">
+    <div class="outer_banner_container">
       <h1 class="inner_content">Rock Paper Scissors Simulator</h1>
     </div>
-    <div class="buttons">
-      <button type="button" name="button"></button>
-      <button type="button" name="button"></button>
-      <button type="button" name="button"></button>
-    </div>
-    <div class="scoreboard">
-      <h2>Score:</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="game">
+      <div class="buttons_container">
+        <button id="rock" class="choice"  name="Rock">
+          <img src="images/rock.png" alt="Rock">
+        </button>
+        <button id="paper" class="choice" name="Paper">
+          <img src="images/paper.png" alt="Paper">
+        </button>
+        <button id="scissors" class="choice" name="Scissors">
+          <img src="images/scissors.png" alt="Scissors">
+        </button>
+      </div>
+      <div class="scoreboard">
+        <h2>Score:</h2>
+        <p>Score and Choice info here</p>
+      </div>
     </div>
   </body>
   <script type="text/javascript">
@@ -62,8 +65,5 @@
       return computerSelection;
     }
   }
-
-
-
   </script>
 </html>

@@ -7,3 +7,5 @@ This project is a demonstration and summation of skills gained in the Odin Proje
 
 <b>Built with</b>
 - Javascript
+- HTML
+- CSS
