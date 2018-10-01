@@ -3,8 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <h1 class="header">Ro' Sham' Bo'</h1>
+    <div class="buttons">
+      <button type="button" name="button"></button>
+      <button type="button" name="button"></button>
+      <button type="button" name="button"></button>
+    </div>
+    <div class="scoreboard">
+      <h2>Score:</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
   </body>
   <script type="text/javascript">
 
@@ -45,23 +61,7 @@
     }
   }
 
-function game(){
-  for(i=0;i<5;i++){
-  let playerSelection = window.prompt("Rock, Paper or Scissors?");
-  let computerSelection = computerPlay();
-  playRound(playerSelection, computerSelection);
-   console.log(`Your choice: ${playerSelection}, Your Score: ${playerScore}, Computers choice: ${computerSelection} Computers Score: ${compScore}`);
-  }
-  if(compScore > playerScore){
-    console.log("You lost! The final Score is: " + "Your Score: " + playerScore + " to " + "Computers Score; " + compScore);
-  } else if(playerScore > compScore){
-    console.log("You Won! The final Score is: " + "Your Score: " + playerScore + " to " + "Computers Score: " + compScore);
-  } else {
-    console.log("You tied! " + "Your Score: " + playerScore + " to " + "Computers Score: " + compScore)
-  }
-}
 
-game();
 
   </script>
 </html>

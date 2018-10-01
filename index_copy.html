@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  </body>
+  <script type="text/javascript">
+
+    let choice = ["rock", "paper", "scissors"];
+    let playerScore = 0;
+    let compScore = 0;
+
+    function computerPlay(){
+      let randomNum = Math.floor(Math.random() * 3);
+      if(randomNum === 0){
+        return choice[0];
+      } else if (randomNum === 1){
+        return choice[1];
+      } else {
+        return choice[2];
+        }
+      }
+
+  function playRound(playerSelection, computerSelection){
+    switch (true){
+      case (playerSelection.toUpperCase() === choice[0].toUpperCase() &&
+      computerSelection === choice[2] || playerSelection.toUpperCase() === choice[1].toUpperCase() &&
+      computerSelection === choice[0] || playerSelection.toUpperCase() === choice[2].toUpperCase() &&
+      computerSelection === choice[1]) :
+      return playerScore++;
+      break;
+      case (playerSelection.toUpperCase() === choice[2].toUpperCase() &&
+      computerSelection === choice[0] || playerSelection.toUpperCase() === choice[0].toUpperCase() &&
+      computerSelection === choice[1] || playerSelection.toUpperCase() === choice[1].toUpperCase() &&
+      computerSelection === choice[2]) :
+      return compScore++;
+      break;
+      case (playerSelection.toUpperCase() === computerSelection.toUpperCase()) :
+      return computerSelection;
+      break;
+      default:
+      return computerSelection;
+    }
+  }
+
+function game(){
+  for(i=0;i<5;i++){
+  let playerSelection = window.prompt("Rock, Paper or Scissors?");
+  let computerSelection = computerPlay();
+  playRound(playerSelection, computerSelection);
+   console.log(`Your choice: ${playerSelection}, Your Score: ${playerScore}, Computers choice: ${computerSelection} Computers Score: ${compScore}`);
+  }
+  if(compScore > playerScore){
+    console.log("You lost! The final Score is: " + "Your Score: " + playerScore + " to " + "Computers Score; " + compScore);
+  } else if(playerScore > compScore){
+    console.log("You Won! The final Score is: " + "Your Score: " + playerScore + " to " + "Computers Score: " + compScore);
+  } else {
+    console.log("You tied! " + "Your Score: " + playerScore + " to " + "Computers Score: " + compScore)
+  }
+}
+
+game();
+
+  </script>
+</html>
