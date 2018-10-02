@@ -7,28 +7,22 @@ body {
 }
 
 body,html {
+  color: rgb(255,255,255);
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .outer_banner_container {
     background-color: rgb(0,0,0,0.5);
     box-shadow: 0px 10px 15px rgba(0, 0, 0) inset;
-    position: absolute;
     text-align: center;
-    top: 0px;
-    right: 0px;
-    left: 0px;
     padding: 25px;
 }
 
 .inner_content {
-    display: inline;
-    position: relative;
-    align-content: center;
     margin: 0 auto;
-    font-family: Arial;
+    /* font-family: Arial; */
     font-size: 44px;
     color: rgb(255,255,255);
     text-shadow: 1px 2px 4px rgb(0, 0, 0);
@@ -36,73 +30,62 @@ body,html {
 }
 
 .game {
-  display: block;
-  position: fixed;
-  bottom: 0px;
-  text-align: center;
-  background: rgb(0,0,0,0.7);
-  padding: 100px 550px;
+  background: rgb(0,0,0);
+  border: solid 1px rgb(255,255,255);
   border-radius: 15px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 49px 76px 165px;
 }
 
 .buttons_container {
-  display: inline-flex;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .choice {
-  display: inline-block;
-  border: 3px solid white;
   border-radius: 50%;
-  padding: 100px 100px;
-  margin: 100px;
-  background: rgb(57, 88, 183);
+  background-color: rgb(110,100,110);
+  width: 140px;
+  height: 140px;
+  margin: 50px;
 }
 
 .choice:focus {
   outline: 0;
 }
 
-#scissors img {
-  position: absolute;
-  top: 36%;
-  left: 77%;
-  width: 162px;
-  height: 122px;
-}
 
-#paper img {
-  position: absolute;
-  top: 34%;
-  left:  45%;
-  width: 133px;
-  height: 125px;
+ #scissors img {
+  width: 108px;
+  height: 86px;
+}
+ #paper img {
+  width: 96px;
+  height: 85px;
 }
 
 #rock img {
-  position: absolute;
-  top: 36%;
-  left: 10%;
-  width: 162px;
-  height: 122px;
+  width: 118px;
+  height: 87px;
+}
+
+.spacer {
+  padding-bottom: 5px;
 }
 
 .scoreboard {
-  color: rgb(255,255,255);
-  background: rgb(0,0,0,0.8);
-  display: block;
-  position: fixed;
-  padding-left: 100px;
-  padding-right: 100px;
+  background: rgb(0,0,0);
+  border-radius: 15px;
   text-align: center;
-  color: white;
-  top: 125%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -127px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.score {
+  background: rgb(255,255,255,0.2);
+}
+
+.results {
+  background: rgb(255,255,255,0.2);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
