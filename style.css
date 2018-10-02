@@ -22,7 +22,6 @@ body,html {
 
 .inner_content {
     margin: 0 auto;
-    /* font-family: Arial; */
     font-size: 44px;
     color: rgb(255,255,255);
     text-shadow: 1px 2px 4px rgb(0, 0, 0);
@@ -34,6 +33,12 @@ body,html {
   border: solid 1px rgb(255,255,255);
   border-radius: 15px;
   margin: 49px 76px 165px;
+}
+
+.game_header {
+  background: rgb(255,255,255,0.2);
+  text-align: center;
+  margin: 0;
 }
 
 .buttons_container {
