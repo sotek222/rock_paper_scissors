@@ -45,31 +45,43 @@ body,html {
   text-align: center;
 }
 
+.clicked {
+  background-color: rgb(40,40,40);
+  transform: scale(1.1);
+}
+
 .choice {
   border-radius: 50%;
-  background-color: rgb(110,100,110);
+  background-color: rgb(100,100,100);
   width: 140px;
   height: 140px;
   margin: 50px;
+}
+
+.choice:hover {
+  background-color: rgb(80,80,80);
 }
 
 .choice:focus {
   outline: 0;
 }
 
-
  #scissors img {
   width: 108px;
   height: 86px;
+  pointer-events: none;
 }
+
  #paper img {
   width: 96px;
   height: 85px;
+  pointer-events: none;
 }
 
 #rock img {
   width: 118px;
   height: 87px;
+  pointer-events: none;
 }
 
 .spacer {
