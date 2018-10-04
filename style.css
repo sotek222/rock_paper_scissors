@@ -45,7 +45,7 @@ body,html {
   text-align: center;
 }
 
-.clicked {
+.button_clicked {
   background-color: rgb(40,40,40);
   transform: scale(1.1);
 }
@@ -84,12 +84,9 @@ body,html {
   pointer-events: none;
 }
 
-.spacer {
-  padding-bottom: 5px;
-}
-
 .scoreboard {
   background: rgb(0,0,0);
+  border: 2px solid rgb(255,255,255);
   border-radius: 15px;
   text-align: center;
   margin-top: -127px;
@@ -97,11 +94,16 @@ body,html {
   margin-right: 50px;
 }
 
+.comp_score {
+  padding-bottom: 5px;
+}
+
 .score {
   background: rgb(255,255,255,0.2);
 }
 
 .results {
+  margin-top: 0px;
   background: rgb(255,255,255,0.2);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
