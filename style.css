@@ -32,7 +32,7 @@ body,html {
   background: rgb(0,0,0);
   border: solid 1px rgb(255,255,255);
   border-radius: 15px;
-  margin: 49px 76px 165px;
+  margin: 2px 251px 165px;
 }
 
 .game_header {
@@ -89,9 +89,10 @@ body,html {
   border: 2px solid rgb(255,255,255);
   border-radius: 15px;
   text-align: center;
+  font-size: 16px;
   margin-top: -127px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .comp_score {
@@ -100,11 +101,55 @@ body,html {
 
 .score {
   background: rgb(255,255,255,0.2);
+  margin-top: 0px;
+  margin-bottom: 8px;
 }
 
 .results {
   margin-top: 0px;
+  margin-bottom: 8px;
   background: rgb(255,255,255,0.2);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.player_choice {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.comps_choice {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.player_score {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.comp_score {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.restart {
+  display: block;
+  background: rgb(51,51,51);
+  color: rgb(255,255,255);
+  border: 1px solid rgb(255,255,255);
+  border-radius: 15px;
+  font-size: 1em;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.restart:hover {
+  background: rgb(20,20,20);
+
+}
+
+.restart:focus {
+  outline: none;
 }

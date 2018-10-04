@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
   computerScorePara.textContent = compScore;
   cScore.appendChild(computerScorePara);
 
+  function pageReload(e){
+    location.reload(e);
+  }
+
   function computerPlay(){
     let randomNum = Math.floor(Math.random() * 3);
     if(randomNum === 0){
@@ -69,6 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const buttons = Array.from(document.querySelectorAll(".choice"));
     buttons.forEach(name => name.addEventListener('click', playRound));
-
-
+    const restart = document.querySelector(".restart");
+    restart.addEventListener('click', pageReload);
 })
