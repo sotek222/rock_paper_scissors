@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     location.reload(e);
   }
 
+  function playWinSound(){
+    let winSound = document.querySelector(".win_sound");
+    winSound.play();
+  }
+
+  function playLoseSound(){
+    let loseSound = document.querySelector(".lose_sound");
+    loseSound.play();
+  }
+
   function computerPlay(){
     let randomNum = Math.floor(Math.random() * 3);
     if(randomNum === 0){
@@ -68,6 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
         default:
           return;
       }
+    }
+    if(score === 5 && playerScore > compScore){
+      playWinSound();
+    } else if(score === 5 && compScore > playerScore){
+      playLoseSound();
     }
   }
 
